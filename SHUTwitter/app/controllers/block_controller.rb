@@ -7,7 +7,12 @@ class BlockController < ApplicationController
 	  @blocktarget_list = search_blocktarget_list(@client)
 	  for target in @blocktarget_list do
 		  @client.block(target)
+		  sleep(0.1)
+	  end
+	  sleep(1)
+	  for target in @blocktarget_list do
 		  @client.unblock(target)
+		  sleep(0.1)
 	  end
   end
   private
