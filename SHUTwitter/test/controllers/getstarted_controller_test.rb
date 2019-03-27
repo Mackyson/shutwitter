@@ -6,4 +6,14 @@ class GetstartedControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get auth" do
+    get getstarted_auth_url
+    assert_response :success
+  end
+
+  test "should get failure" do
+    get getstarted_failure_url
+    assert_response :success
+  end
+
 end

@@ -3,7 +3,11 @@
 one:
   provider: MyString
   uid: MyString
+  token: MyString
+  token_secret: MyString
 
 two:
   provider: MyString
   uid: MyString
+  token: MyString
+  token_secret: MyString
