@@ -3,8 +3,11 @@ class GetstartedController < ApplicationController
   end
 
   def auth
-	  @user = User.find_or_create_from_auth_hash(request.env['omniauth.auth'])
-	  redirect_to(root_path)
+	  @user = request.env['omniauth.auth']
+	  cookies[:uid] = { value:@user[:uid], expires: 5.minute.from_now}
+	  cookies[:token] = { value:@user[:credentials][:token], expires: 5.minute.from_now}
+	  cookies[:token_secret] = { value:@user[:credentials][:secret], expires: 5.minute.from_now}
+	  redirect_to "/block/index"
   end
 
   def failure
