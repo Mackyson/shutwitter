@@ -18,8 +18,8 @@ class BlockController < ApplicationController
   private
   def twitter_client
 	  @client = Twitter::REST::Client.new do |config|
-		  config.consumer_key = Rails.application.secrets.twitter_api_key
-		  config.consumer_secret = Rails.application.secrets.twitter_api_secret
+		  config.consumer_key = ENV['CONSUMER_KEY']
+		  config.consumer_secret = ENV['CONSUMER_SECRET']
 		  config.access_token = cookies[:token]
 		  config.access_token_secret = cookies[:token_secret]
 	  end
