@@ -6,6 +6,7 @@ ruby '2.4.0'
 gem 'omniauth'
 gem 'omniauth-twitter'
 gem 'twitter'
+gem 'dotenv-rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.2', '>= 5.2.2.1'
@@ -66,7 +67,6 @@ end
 group :production do
 	#The production environment is Heroku.
 	gem 'pg'
-	gem 'dotenv-rails'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
