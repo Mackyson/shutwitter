@@ -1,24 +1,22 @@
-# README
+# SHUTwitter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 思想
+フォロアーの数は自分に向けられた銃口の数 => 一方的にフォローされている場合不利なのでは?
 
-Things you may want to cover:
+## どんな人におすすめ?
+フォロア−が増えて肩身が狭くなってきたあなた…  
+炎上防止で鍵垢に移行したけどフォロア−が多かったせいで意味がないあなた…  
+いっぱいブロ解したいけどブロック→ブロック解除を一人ひとりやるのがめんどくさいあなた…  
+**そんなあなたのためのサービスです！**  
 
-* Ruby version
+## これはなに?
+あなたのフォロアーうち、あなたがフォロバしてない人をブロ解するサービスです。
 
-* System dependencies
+### 応用例
+ブロ解したい人をリムーブ => SHUTwitterでSHUTするとブロ解ができます。  
+フォロー外すだけで一気にブロ解できるので楽。
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## どう使う?
+1. [Twitterで認証ボタン] を押す
+1. [SHUTする] を押す
+1. 完了
