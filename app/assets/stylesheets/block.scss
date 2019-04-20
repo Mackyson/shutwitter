@@ -1,3 +1,46 @@
 // Place all the styles related to the block controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "./getstarted.scss";
+.shut-button{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+	margin: auto;
+	padding: 8px 2em 10px;
+	width: 150px;
+	display: block;
+	font: {
+		family: "Noto Serif JP",serif;
+		size: 1.0em;
+		weight: bold;
+	}
+	text: {
+		align: center;
+		decoration: none;
+	}
+	color: $white;
+	background-color: $red;
+	border-radius: 5px;
+}
+#warning{
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	transform: translateY(-25%) translateX(-50%);
+	color: $yellow;
+	span{color: $red;font-size: 1.5em;}
+	font: {
+		family: "Noto Serif JP",serif;
+		size: 1.0em;
+	}
+}
+.message{
+	margin: 1.2em 0 0.5em;
+	color: $yellow;
+	font: {
+		family: "Noto Serif JP",serif;
+		size: 2.0em;
+	}
+}
