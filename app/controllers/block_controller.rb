@@ -4,7 +4,6 @@ class BlockController < ApplicationController
   end
 
   def blocking
-	  cnt=0
 	  @blocktarget_list = search_blocktarget_list(@client)
 	  for target in @blocktarget_list do
 		  @client.block(target)
@@ -13,15 +12,8 @@ class BlockController < ApplicationController
 	  sleep(1)
 	  for target in @blocktarget_list do
 		  @client.unblock(target)
-		  cnt++
 		  sleep(0.1)
 	  end
-	  @shutMessage=
-		  if (cnt==0)
-			"SHUT対象はいませんでした。"
-		  else
-			cnt.to_s() << "人をSHUTしました。"
-		  end
   end
   private
   def twitter_client
