@@ -1,3 +1,58 @@
 // Place all the styles related to the getstarted controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+$red: #a41212;
+$yellow: yellow;
+$black: #111111;
+$white: white;
+
+body{
+text-align: center;
+background-color: $black;
+margin: 0;
+padding: 0;
+}
+
+
+#alert{
+	background-color: $red;
+	color:$white;
+	font: {
+		family: 'Noto Serif JP',serif;
+		size: 1.2em;
+	}
+}
+#content{
+	color: $yellow;
+	font: {
+		family: 'Noto Serif JP',serif;
+		size: 1.0em;
+	}
+	.threat {
+		margin: 2em;
+		color: $red;
+		font: {
+			size: 1.7em;
+		}
+	}
+	ul {
+		li{padding:0.2em;}
+		list-style-type: none;
+		background-image: none;
+	}
+	.auth-button {
+		margin: 0.5em auto 1.5em;
+		padding: 8px 2em 10px;
+		width: 150px;
+		display: block;
+		font-size: 1.0em;
+		font-weight: bold;
+		text-decoration: none;
+		text-align: center;
+		color: #fff;
+		background-color: #44aadd;
+		border-radius: 5px;
+	}
+}
+

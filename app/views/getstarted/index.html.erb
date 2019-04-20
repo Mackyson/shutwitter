@@ -1,6 +1,21 @@
+
+<link href="https://fonts.googleapis.com/css?family=Aleo|Noto+Serif+JP" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP" rel="stylesheet">
+
+<div id="alert">
 <% if flash[:alert] %>
-	<%= flash[:alert] %>
+		<%= flash[:alert] %>
 <% end %>
-<h1>Getstarted#index</h1>
-<p>Find me in app/views/getstarted/index.html.erb</p>
-<%= link_to 'Twitterで認証する', '/auth/twitter' %>
+</div>
+<div id="content">
+	<div class="threat" id="top">あなたのツイート、必要以上に見られていませんか?</div>
+	<ul>
+		<li>フォロア−が増えて迂闊に発言できない……</li>
+		<li>鍵垢なのに一方的にツイートを見られている……</li>
+	</ul>
+	<div class="threat">炎上防止サービス「SHUTwitter」</div>
+	<%= link_to 'Twitterで認証する', '/auth/twitter' ,class: "auth-button"%>
+	<div id="guide">
+		あなたのフォロアーのうち、あなたがフォローしていない人のフォローを解除させます。
+	</div>
+</div>
