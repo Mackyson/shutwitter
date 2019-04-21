@@ -8,12 +8,12 @@ class BlockController < ApplicationController
 	  p @blocktarget_list
 	  for target in @blocktarget_list do
 		  @client.block(target)
-		  sleep(0.01)
+		  sleep(0.1)
 	  end
-	  sleep(0.1)
+	  sleep(1)
 	  for target in @blocktarget_list do
 		  @client.unblock(target)
-		  sleep(0.01)
+		  sleep(0.1)
 	  end
   end
   private
