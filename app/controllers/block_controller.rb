@@ -5,14 +5,15 @@ class BlockController < ApplicationController
 
   def blocking
 	  @blocktarget_list = search_blocktarget_list(@client)
+	  p @blocktarget_list
 	  for target in @blocktarget_list do
 		  @client.block(target)
-		  sleep(0.1)
+		  sleep(0.01)
 	  end
-	  sleep(1)
+	  sleep(0.1)
 	  for target in @blocktarget_list do
 		  @client.unblock(target)
-		  sleep(0.1)
+		  sleep(0.01)
 	  end
   end
   private
@@ -26,17 +27,18 @@ class BlockController < ApplicationController
 	end
   def search_blocktarget_list(user)
 	  followers_list = user.follower_ids(count: 200)
-	  following_list = user.friend_ids
-	  is_following = {}
-	  blocktarget_list = []
+	  following_list = user.friend_ids(count: 200)
+	  is_following = Hash.new
+	  blocktarget_list = Array.new
 	  for following in following_list do
-		  is_following[following] = true;
+		  is_following[following] = true
 	  end
 	  for follower in followers_list do
 		  unless is_following[follower]
 			  blocktarget_list << follower
 		  end
 	  end
+	  blocktarget_list
   end
 
 end
